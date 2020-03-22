@@ -1,2 +1,3 @@
 # ficoemcasa
-Auxílio ao Covid19
+
+Aplicativo para ligar pequenos comerciantes a compradores próximos para auxiliar o comércio durante a pandemia.
