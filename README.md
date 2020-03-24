@@ -8,6 +8,13 @@ Aplicativo para ligar pequenos comerciantes a compradores próximos para auxilia
 
 Backend
 
+#### Procedimentos para montagem do ambiente
+
+- Instalar o node 8.0 ou superior
+- Instalar o npm 3.0 ou superior
+- Instalar o cli tool de maneira global ```sudo npm i -g @adonisjs/cli```
+- Verificar se o adonis está funcionando: ```adonis --help```
+
 ### ficoemcasa-app
 
 Frontend
