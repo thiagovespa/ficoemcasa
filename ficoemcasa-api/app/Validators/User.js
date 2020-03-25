@@ -4,6 +4,15 @@ const BaseValidator = require('./BaseValidator')
 
 class User extends BaseValidator {
   get rules () {
+    const userId = this.ctx.params.id
+      if(userId){
+        return {
+          email: `email|unique:users,email,id,${userId}`,         
+          type: 'in:consumidor,comerciante',
+          cpf: `unique:users,cpf,id,${userId}`
+        }
+    }
+
     return {
       email: 'required|email|unique:users,email',
       password: 'required',

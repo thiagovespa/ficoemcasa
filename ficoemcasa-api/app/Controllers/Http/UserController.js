@@ -8,6 +8,15 @@ class UserController {
         return await User.create(request.post())
     }
 
+    async update ({ params, request, response }) {
+        const user = await User.findOrFail(params.id)        
+        const data = request.all()
+
+        user.merge(data)
+        await user.save()
+        return user
+      }
+
     async show ({ params }) {
         return await User.findOrFail(params.user)
     }
