@@ -23,3 +23,7 @@ Route.get('/', () => {
 Route
   .post('/users', 'UserController.create')
   .validator('User')
+  
+Route
+  .put('/users/:id', 'UserController.update')
+  .validator('User')
