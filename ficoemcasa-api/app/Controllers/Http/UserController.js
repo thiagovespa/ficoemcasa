@@ -9,7 +9,7 @@ class UserController {
     }
 
     async update ({ params, request, response }) {
-        const user = await User.findOrFail(params.id)        
+        const user = await User.findOrFail(params.id)
         const data = request.all()
 
         user.merge(data)

@@ -7,16 +7,24 @@ const Hash = use('Hash')
 
 trait('Test/ApiClient')
 trait('DatabaseTransactions')
+trait('Auth/Client')
 
 test('showing an user that does not exist should return not found', async ({ client }) => {
-  const response = await client.get('/users/1').end()
+  const user = await Factory.model('App/Models/User').create()
+  const response = await client
+                  .get('/users/10')
+                  .loginVia(user)
+                  .end()
 
   response.assertStatus(404)
 })
 
 test('showing an user that exist should return an ok request and prompt the user found', async ({ client }) => {
     const user = await Factory.model('App/Models/User').create()
-    const response = await client.get(`/users/${user.id}`).end()
+    const response = await client
+                      .get(`/users/${user.id}`)
+                      .loginVia(user)
+                      .end()
 
     response.assertStatus(200)
     response.assertJSONSubset({
@@ -31,3 +39,10 @@ test('showing an user that exist should return an ok request and prompt the user
         bio: user.bio
     })
   })
+
+test('showing an user without loggin in should return unauthorized', async ({ client }) => {
+  await Factory.model('App/Models/User').create()
+  const response = await client.get('/users/1').end()
+
+  response.assertStatus(401)
+})

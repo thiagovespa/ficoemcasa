@@ -23,16 +23,21 @@ Route.get('/', () => {
 Route
   .post('/users/', 'UserController.create')
   .validator('User')
-  
-Route
-  .put('/users/:id', 'UserController.update')
-  .validator('User')
 
 
-Route
-  .get('/users/:user', 'UserController.show')
-  .middleware(['auth'])
+
 
 Route
   .post('/login', 'AuthController.login')
   .validator('Auth')
+
+Route.group(() => {
+  //protected routes
+  Route
+    .get('/users/:user', 'UserController.show')
+
+  Route
+    .put('/users/:id', 'UserController.update')
+    .validator('User')
+
+}).middleware(['auth'])
