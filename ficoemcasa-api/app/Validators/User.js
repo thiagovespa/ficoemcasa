@@ -7,13 +7,9 @@ class User extends BaseValidator {
     const userId = this.ctx.params.id
       if(userId){
         return {
-          email: `required|email|unique:users,email,id,${userId}`,
-          password: 'required',
-          address: 'required',
-          username: 'required',
-          type: 'required|in:consumidor,comerciante',
-          phone: 'required',
-          cpf: `required|unique:users,cpf,id,${userId}`
+          email: `email|unique:users,email,id,${userId}`,         
+          type: 'in:consumidor,comerciante',
+          cpf: `unique:users,cpf,id,${userId}`
         }
     }
 

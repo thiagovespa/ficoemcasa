@@ -8,9 +8,8 @@ class UserController {
         return await User.create(request.post())
     }
 
-    async update({ params, request, response }) {
-        console.log('teste', params )
-        const user = await User.findBy('id', params.id)
+    async update ({ params, request, response }) {
+        const user = await User.findOrFail(params.id)        
         const data = request.all()
 
         user.merge(data)
