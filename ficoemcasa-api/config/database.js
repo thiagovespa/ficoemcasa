@@ -80,5 +80,12 @@ module.exports = {
       database: Env.get('DB_DATABASE', 'adonis')
     },
     debug: Env.get('DB_DEBUG', false)
+  },
+
+  /** Here we define a sqlite database in memory for test purposes */
+  sqlite_testing: {
+    client: 'sqlite3',
+    connection: ':memory:',
+    useNullAsDefault: true
   }
 }

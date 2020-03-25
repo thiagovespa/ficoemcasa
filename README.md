@@ -15,6 +15,30 @@ Backend
 - Instalar o cli tool de maneira global ```sudo npm i -g @adonisjs/cli```
 - Verificar se o adonis está funcionando: ```adonis --help```
 
+#### Rodar migrações
+
+```
+adonis migration:run
+```
+
+#### Semear base de dados
+
+```
+adonis seed
+```
+
+#### Iniciar servidor em mode de desenvolvimento
+
+```
+adonis serve --dev
+```
+
+#### Executando testes
+
+```
+adonis test
+```
+
 ### ficoemcasa-app
 
 Frontend
