@@ -4,7 +4,7 @@ const User = use('App/Models/User')
 
 class UserController {
 
-    async create({ request }) {
+    async create ({ request }) {
         return await User.create(request.post())
     }
 
@@ -17,6 +17,10 @@ class UserController {
         await user.save()
         return user
       }
+
+    async show ({ params }) {
+        return await User.findOrFail(params.user)
+    }
 }
 
 module.exports = UserController
