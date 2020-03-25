@@ -21,5 +21,7 @@ Route.get('/', () => {
 })
 
 Route
-  .post('/users', 'UserController.create')
+  .post('/users/', 'UserController.create')
   .validator('User')
+
+Route.get('/users/:user', 'UserController.show')
