@@ -24,4 +24,11 @@ Route
   .post('/users/', 'UserController.create')
   .validator('User')
 
-Route.get('/users/:user', 'UserController.show')
+
+Route
+  .get('/users/:user', 'UserController.show')
+  .middleware(['auth'])
+
+Route
+  .post('/login', 'AuthController.login')
+  .validator('Auth')
