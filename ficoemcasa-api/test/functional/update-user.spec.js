@@ -7,12 +7,13 @@ const Hash = use('Hash')
 
 trait('Test/ApiClient')
 trait('DatabaseTransactions')
-
+trait('Auth/Client')
 
 test('updating an user with an invalid email field should return a bad request and prompt and error message', async ({ client }) => {
+  const user = await Factory.model('App/Models/User').create()
   const requestBody = getRequestBody()
   requestBody.email = "invalidemail"
-  const response = await client.put('/users/2')
+  const response = await client.put('/users/2').loginVia(user)
                     .send(requestBody).end()
 
   response.assertStatus(400)
@@ -26,7 +27,7 @@ test('updating an user with an email that already exists should return a bad req
   const requestBody = getRequestBody()
   requestBody.email = user.email
   const response = await client.put('/users/2')
-                    .send(requestBody).end()
+                    .loginVia(user).send(requestBody).end()
 
   response.assertStatus(400)
   response.assertJSON({
@@ -35,9 +36,10 @@ test('updating an user with an email that already exists should return a bad req
 })
 
 test('updating an user with invalid type field should return a bad request and prompt and error message', async ({ client }) => {
+  const user = await Factory.model('App/Models/User').create()
   const requestBody = getRequestBody()
   requestBody.type = 'invalidtype'
-  const response = await client.put('/users/1')
+  const response = await client.put('/users/1').loginVia(user)
                     .send(requestBody).end()
 
   response.assertStatus(400)
@@ -50,7 +52,7 @@ test('updating an user with an cpf that already exists should return a bad reque
   const user = await Factory.model('App/Models/User').create()
   const requestBody = getRequestBody()
   requestBody.cpf = user.cpf
-  const response = await client.put('/users/2')
+  const response = await client.put('/users/2').loginVia(user)
                     .send(requestBody).end()
 
   response.assertStatus(400)
@@ -60,7 +62,8 @@ test('updating an user with an cpf that already exists should return a bad reque
 })
 
 test('updating an user that does not exist should return not found', async ({ client }) => {
-  const response = await client.get('/users/10').end()
+  const user = await Factory.model('App/Models/User').create()
+  const response = await client.put('/users/10').loginVia(user).end()
 
   response.assertStatus(404)
 })
@@ -69,13 +72,22 @@ test('updating a valid user should return an ok request and prompt the user upda
   const user = await Factory.model('App/Models/User').create()
   const requestBody = getRequestBody()
   requestBody.bio = 'Test bio'
-  const response = await client.put('/users/1')
+  const response = await client.put('/users/1').loginVia(user)
                     .send(requestBody).end()
 
   const expectedResponse = requestBody
   delete expectedResponse.password
   response.assertStatus(200)
   response.assertJSONSubset(expectedResponse)
+})
+
+test('updating without loggin in should return unauthorized', async ({ client }) => {
+  await Factory.model('App/Models/User').create()
+  const requestBody = getRequestBody()
+  const response = await client.put('/users/1')
+                    .send(requestBody).end()
+
+  response.assertStatus(401)
 })
 
 function getRequestBody() {
