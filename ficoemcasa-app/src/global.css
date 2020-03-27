@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+*,
+*::after,
+*::before {
+	margin: 0; 
+	padding: 0;
+	box-sizing: inherit;
+	outline: none;
+}
+
+html { 	
+	font-size: 62.5%;
+	font-family: Roboto, sans-serif;
+
+} 
+
+body {
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea {
+  font: 400 18px Roboto, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
