@@ -24,9 +24,6 @@ Route
   .post('/users/', 'UserController.create')
   .validator('User')
 
-
-
-
 Route
   .post('/login', 'AuthController.login')
   .validator('Auth')
@@ -39,5 +36,8 @@ Route.group(() => {
   Route
     .put('/users/:id', 'UserController.update')
     .validator('User')
+
+  Route
+    .get('/payment-types', 'PaymentTypeController.index')
 
 }).middleware(['auth'])
