@@ -13,19 +13,19 @@ const Footer = () => {
       <LinkList>
         <li>
           <FooterBtn>
-            <FiHome size={18} />
+            <FiHome size={17} />
             <span>Inicio</span>
           </FooterBtn>
         </li>
         <li>
           <FooterBtn>
-            <FiUser size={18} />
+            <FiUser size={17} />
             <span>Perfil</span>
           </FooterBtn>
         </li>
         <li>
           <FooterBtn>
-            <FiShoppingCart size={18} />
+            <FiShoppingCart size={17} />
             <span>Carrinho</span>
           </FooterBtn>
         </li>

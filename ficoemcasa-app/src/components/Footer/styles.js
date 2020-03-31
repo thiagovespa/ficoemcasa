@@ -28,5 +28,5 @@ export const FooterBtn = styled(Link)`
   align-items: center;
   text-decoration: none;
   color: #5C5C5B;
-  padding: 1.5rem 0 .5rem;
+  padding: 1.3rem 0 .5rem;
 `
