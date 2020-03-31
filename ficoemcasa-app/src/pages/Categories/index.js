@@ -1,15 +1,21 @@
-import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 
 import Header from '../../components/Header'
+import StoreBanner from '../../components/StoreBanner'
+import Footer from '../../components/Footer'
+
+import { MainTitle } from '../../components/Styled'
 
 const Categoria = () => {
   return (
-    <Fragment>
-      <Header/>
-      <h1>Categoria</h1>
-      <Link to='/'>Voltar</Link>
-    </Fragment>
+    <>
+      <Header />
+      <StoreBanner />
+      <MainTitle>
+        O que você vai comprar hoje?
+      </MainTitle>
+      <Footer />
+    </>
   )
 }
 
