@@ -40,4 +40,16 @@ Route.group(() => {
   Route
     .get('/payment-types', 'PaymentTypeController.index')
 
+  Route
+    .post('/category-types', 'CategoryTypeController.index')
+    .validator('CategoryType')
+
+  Route
+    .get('/category-types/:id', 'CategoryTypeController.show')
+
+  Route
+    .get('/category-types', 'CategoryTypeController.showAll')
+
+  Route
+    .delete('/category-types/:id', 'CategoryTypeController.delete')
 }).middleware(['auth'])
