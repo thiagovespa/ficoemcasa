@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FiSearch } from 'react-icons/fi'
 
 import {
@@ -8,7 +9,7 @@ import {
   SearchBtn
 } from './styles'
 
-import logo from '../../assets/fico-em-casa-logo.svg'
+import logo from '../../assets/fico-em-casa-logo-branco.svg'
 
 const Header = () => {
   const [isSearchActive, setSearchActive] = useState(false)
@@ -16,7 +17,9 @@ const Header = () => {
   return (
     <Background>
       <h1>
-        <Logo src={logo} alt='Fico em casa' title='Fico em casa' />
+        <Link to='/'>
+          <Logo src={logo} alt='Fico em casa' title='Fico em casa' />
+        </Link>
       </h1>
       <div>
         <SearchInput

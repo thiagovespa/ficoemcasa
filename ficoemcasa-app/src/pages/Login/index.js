@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -19,9 +19,10 @@ const Navigator = styled(Link)`
 const Login = () => {
   return (
     <>
-      <h1>Login</h1>
+      <h1>Inicio</h1>
       <Example>Eu sou um exemplo de componente</Example>
       <Navigator to='/categorias'>Categorias</Navigator>
+      <Navigator to='/bem-vindo'>Onboarding</Navigator>
     </>
   )
 }
