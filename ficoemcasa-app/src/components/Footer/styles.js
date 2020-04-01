@@ -10,6 +10,12 @@ export const Container = styled.nav`
   box-shadow: 0px -2px 10px rgba(0,0,0,0.15);
 `
 
+export const Spacer = styled.div`
+  width: 100vw;
+  height: 6rem;
+  background-color: transparent
+`
+
 export const LinkList = styled.ul`
   display: flex;
   justify-content: space-between;
