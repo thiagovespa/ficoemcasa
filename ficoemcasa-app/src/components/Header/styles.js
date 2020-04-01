@@ -12,8 +12,9 @@ export const Background = styled.header`
 
 export const Logo = styled.img`
   display: inline-block;
-  margin: 1rem auto;
+  margin: 1rem auto 0;
   max-width: 5.5rem;
+  width: 15%;
 `
 
 export const SearchInput = styled.input`
