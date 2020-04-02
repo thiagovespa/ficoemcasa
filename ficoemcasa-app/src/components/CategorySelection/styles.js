@@ -34,7 +34,7 @@ export const CategoryLink = styled(Link)`
   justify-content: center;
   position: relative;
   padding: 3rem 1.5rem;
-  background-color: ${props => props.backgroundColor};
+  background-color: ${props => props.background};
   border-radius: 3rem;
 
   > img {

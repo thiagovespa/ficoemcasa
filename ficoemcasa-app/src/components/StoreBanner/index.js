@@ -11,7 +11,7 @@ const StoreBanner = () => {
       <ButtonLink>
         Cadastre sua loja
       </ButtonLink>
-      <img src={storeImg} title='Cadastre sua loja' />
+      <img src={storeImg} title='Cadastre sua loja' alt='Cadastre sua loja' />
     </Banner>
   )
 }
