@@ -43,17 +43,6 @@ width: 50%;
 margin-bottom: 1rem;
 `
 
-export const Title = styled.h2`
-font-family: 'Baloo 2', sans-serif;
-font-size: 2.5rem;
-line-height: 3rem;
-color: #FF9962;
-width: 60%;
-max-width: 19rem;
-text-align: center;
-margin-bottom: 2rem;
-`
-
 export const Text = styled.p`
 font-size: 1.6rem;
 line-height: 2.5rem;

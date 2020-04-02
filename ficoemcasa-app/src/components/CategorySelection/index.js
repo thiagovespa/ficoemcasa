@@ -14,7 +14,7 @@ const CategorySelection = () => {
       <List>
         <li>
           <CategoryLink
-            backgroundColor='#a4a4a4'
+            background='#a4a4a4'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
             <h3>Alimentação</h3>
@@ -22,7 +22,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
-            backgroundColor='#ad9153'
+            background='#ad9153'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
             <h3>Açougue</h3>
@@ -30,7 +30,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
-            backgroundColor='#6b9baf'
+            background='#6b9baf'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
             <h3>Remédios</h3>
@@ -38,7 +38,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
-            backgroundColor='#609f8e'
+            background='#609f8e'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
             <h3>Água e Gás</h3>
@@ -46,7 +46,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
-            backgroundColor='#ad767a'
+            background='#ad767a'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
             <h3>Bebidas</h3>
@@ -54,7 +54,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
-            backgroundColor='#81a16a'
+            background='#81a16a'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
             <h3>Horti-Fruti</h3>
