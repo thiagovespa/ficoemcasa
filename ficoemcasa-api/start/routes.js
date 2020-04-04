@@ -24,6 +24,7 @@ Route
   .post('/users/', 'UserController.create')
   .validator('User')
 
+
 Route.get('/authenticated/facebook', 'FacebookController.callback')
 
 Route
@@ -39,4 +40,19 @@ Route.group(() => {
     .put('/users/:id', 'UserController.update')
     .validator('User')
 
+  Route
+    .get('/payment-types', 'PaymentTypeController.index')
+
+  Route
+    .post('/category-types', 'CategoryTypeController.index')
+    .validator('CategoryType')
+
+  Route
+    .get('/category-types/:id', 'CategoryTypeController.show')
+
+  Route
+    .get('/category-types', 'CategoryTypeController.showAll')
+
+  Route
+    .delete('/category-types/:id', 'CategoryTypeController.delete')
 }).middleware(['auth'])

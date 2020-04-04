@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+2:500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sarala&display=swap');
+
+*,
+*::after,
+*::before {
+	margin: 0; 
+	padding: 0;
+	box-sizing: inherit;
+	outline: none;
+}
+
+html { 	
+	font-size: 62.5%;
+	font-family: 'Sarala', sans-serif;
+
+} 
+
+body {
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea {
+  font: 400 18px 'Sarala', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
