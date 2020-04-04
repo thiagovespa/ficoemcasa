@@ -24,6 +24,9 @@ Route
   .post('/users/', 'UserController.create')
   .validator('User')
 
+
+Route.get('/authenticated/facebook', 'FacebookController.callback')
+
 Route
   .post('/login', 'AuthController.login')
   .validator('Auth')
