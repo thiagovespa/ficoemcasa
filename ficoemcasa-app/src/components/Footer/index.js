@@ -15,19 +15,19 @@ const Footer = () => {
       <Container>
         <LinkList>
           <li>
-            <FooterBtn>
+            <FooterBtn to='/'>
               <FiHome size={17} />
               <span>Inicio</span>
             </FooterBtn>
           </li>
           <li>
-            <FooterBtn>
+            <FooterBtn to='/'>
               <FiUser size={17} />
               <span>Perfil</span>
             </FooterBtn>
           </li>
           <li>
-            <FooterBtn>
+            <FooterBtn to='/'>
               <FiShoppingCart size={17} />
               <span>Carrinho</span>
             </FooterBtn>

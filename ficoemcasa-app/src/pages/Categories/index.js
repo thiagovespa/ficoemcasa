@@ -7,7 +7,7 @@ import Footer from '../../components/Footer'
 
 import { MainTitle } from '../../components/Styled'
 
-const Categoria = () => {
+const Categories = () => {
   return (
     <>
       <Header />
@@ -21,4 +21,4 @@ const Categoria = () => {
   )
 }
 
-export default Categoria
+export default Categories

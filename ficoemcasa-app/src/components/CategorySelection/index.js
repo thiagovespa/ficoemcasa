@@ -14,6 +14,7 @@ const CategorySelection = () => {
       <List>
         <li>
           <CategoryLink
+            to='/categorias/categoryID'
             background='#a4a4a4'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
@@ -22,6 +23,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
+            to='/categorias/categoryID'
             background='#ad9153'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
@@ -30,6 +32,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
+            to='/categorias/categoryID'
             background='#6b9baf'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
@@ -38,6 +41,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
+            to='/categorias/categoryID'
             background='#609f8e'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
@@ -46,6 +50,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
+            to='/categorias/categoryID'
             background='#ad767a'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />
@@ -54,6 +59,7 @@ const CategorySelection = () => {
         </li>
         <li>
           <CategoryLink
+            to='/categorias/categoryID'
             background='#81a16a'
           >
             <img src={categoryImg} title='Categoria' alt='Categoria' />

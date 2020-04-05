@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Example from './pages/Example'
 import Categories from './pages/Categories'
+import Subcategories from './pages/Subcategories'
 import Login from './pages/Login'
 import OnBoarding from './pages/OnBoarding'
 
@@ -13,6 +14,7 @@ export default function Routes () {
         <Route path='/' exact component={Example} />
         <Route path='/bem-vindo' exact component={OnBoarding} />
         <Route path='/categorias' exact component={Categories} />
+        <Route path='/categorias/:categoryID' exact component={Subcategories} />
         <Route path='/login' exact component={Login} />
       </Switch>
     </BrowserRouter>
