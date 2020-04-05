@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Background = styled.header`
   background: rgb(247,176,61);
@@ -6,8 +7,32 @@ export const Background = styled.header`
     135deg, #e9714d 0%,
     #ef9354 100%
   );
-  text-align: center;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all ease .2s;
+
+  border-radius: ${props => props.isFirstPage ? '0' : '0 0 3rem 0'};
+`
+
+export const BackButton = styled(Link)`
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.6rem;
+  padding: 1rem 1rem .5rem;
+  color: #fff;
+  text-decoration: none;
+`
+
+export const LogoWrapper = styled.h1`
+  display: block;
+  width: 100%;
+  text-align: center;
 `
 
 export const Logo = styled.img`
@@ -15,6 +40,11 @@ export const Logo = styled.img`
   margin: 1rem auto 0;
   max-width: 5.5rem;
   width: 15%;
+`
+
+export const SearchWrapper = styled.div`
+  width: 100%;
+  text-align: center;
 `
 
 export const SearchInput = styled.input`
@@ -49,4 +79,12 @@ export const SearchBtn = styled.button`
   right: ${props => props.isSearchActive ? '0' : '15%'};
 
   transition: all ease .2s;
+`
+
+export const Title = styled.h1`
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: .5rem;
+  color: #FFFFFF;
 `

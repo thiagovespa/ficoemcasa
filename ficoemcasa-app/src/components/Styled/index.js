@@ -52,7 +52,7 @@ export const MainTitle = styled.h1`
   line-height: 35px;
   color: ${props => props.color ? props.color : '#8B867E'};
   text-align: center;
-  margin: 0 auto;
+  margin: 1rem auto;
 `
 
 export const SecondaryTitle = styled.h2`
