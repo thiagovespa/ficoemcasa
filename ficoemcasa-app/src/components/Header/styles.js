@@ -88,3 +88,8 @@ export const Title = styled.h1`
   margin-bottom: .5rem;
   color: #FFFFFF;
 `
+
+export const HeaderImage = styled.img`
+  display: inline-block;
+  width: 80px;
+`

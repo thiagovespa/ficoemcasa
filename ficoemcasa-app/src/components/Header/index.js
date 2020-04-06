@@ -10,12 +10,13 @@ import {
   SearchWrapper,
   SearchInput,
   SearchBtn,
+  HeaderImage,
   Title
 } from './styles'
 
 import logo from '../../assets/fico-em-casa-logo-branco.svg'
 
-const Header = ({ hasBackButton, headerTitle }) => {
+const Header = ({ hasBackButton, headerTitle, headerImage }) => {
   const [isSearchActive, setSearchActive] = useState(false)
 
   return (
@@ -53,6 +54,8 @@ const Header = ({ hasBackButton, headerTitle }) => {
           />
         </SearchBtn>
       </SearchWrapper>
+
+      {/* {headerImage && <HeaderImage src={headerImage} />} */}
     </Background>
   )
 }
