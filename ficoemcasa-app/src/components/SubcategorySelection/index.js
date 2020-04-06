@@ -11,7 +11,7 @@ const SubcategorySelection = () => {
     <List>
       <li>
         <SubcategoryLink
-          to='/'
+          to='/produtos'
           image={restaurante}
         >
           <h3>Restaurantes</h3>
@@ -19,7 +19,7 @@ const SubcategorySelection = () => {
       </li>
       <li>
         <SubcategoryLink
-          to='/'
+          to='/produtos'
           image={lanchonete}
         >
           <h3>Lanchonete</h3>
@@ -27,7 +27,7 @@ const SubcategorySelection = () => {
       </li>
       <li>
         <SubcategoryLink
-          to='/'
+          to='/produtos'
           image={restaurante}
         >
           <h3>Marmitas</h3>
@@ -35,7 +35,7 @@ const SubcategorySelection = () => {
       </li>
       <li>
         <SubcategoryLink
-          to='/'
+          to='/produtos'
           image={sorvete}
         >
           <h3>Sorveterias</h3>
@@ -43,7 +43,7 @@ const SubcategorySelection = () => {
       </li>
       <li>
         <SubcategoryLink
-          to='/'
+          to='/produtos'
           image={sorvete}
         >
           <h3>Doces</h3>
