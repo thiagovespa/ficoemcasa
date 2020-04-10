@@ -18,28 +18,28 @@ const productData = [
     title: 'Produto cadastrado',
     description: 'Lorem Ipsum Sit Dolor amet',
     value: 18.99,
-    image: img1, 
+    image: img1
   },
   {
     id: 2,
     title: 'Produto cadastrado',
     description: 'Lorem Ipsum Sit Dolor amet',
     value: 18.99,
-    image: img2, 
+    image: img2
   },
   {
     id: 3,
     title: 'Produto cadastrado',
     description: 'Lorem Ipsum Sit Dolor amet',
     value: 18.99,
-    image: img3, 
+    image: img3
   },
   {
     id: 4,
     title: 'Produto cadastrado',
     description: 'Lorem Ipsum Sit Dolor amet',
     value: 18.99,
-    image: img1, 
+    image: img1
   }
 ]
 
@@ -54,7 +54,7 @@ const Products = () => {
         Escolha sua loja
       </MainTitle>
       {productData.map(product => (
-        <ProductSummary product={product} />
+        <ProductSummary key={product.id} product={product} />
       ))}
       <Footer />
     </>

@@ -22,6 +22,7 @@ const Example = () => {
       <Navigator to='/categorias/id'>Subcategorias</Navigator>
       <Navigator to='/lojas'>Lojas</Navigator>
       <Navigator to='/produtos'>Produtos</Navigator>
+      <Navigator to='/produto/id'>Produto</Navigator>
     </>
   )
 }
