@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { ButtonLink } from '../Styled'
 import {
@@ -19,14 +19,15 @@ const StoreSummary = ({ store }) => {
         <StoreTitle>{store.name}</StoreTitle>
         <StoreAddress>{store.address}</StoreAddress>
         <ButtonLink
-          background="#78DB56"
+          background='#78DB56'
           streched
-          to='/produtos' >
+          to='/produtos'
+        >
           Ver mais
         </ButtonLink>
       </div>
     </Wrapper>
-  );
+  )
 }
- 
-export default StoreSummary;
+
+export default StoreSummary

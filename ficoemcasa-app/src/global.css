@@ -26,6 +26,28 @@ input, button, textarea {
   font: 400 18px 'Sarala', sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 button {
   cursor: pointer;
+}
+
+::-webkit-input-placeholder { 
+  color: #999;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #999;
+}
+
+::placeholder {
+  color: #999;
 }

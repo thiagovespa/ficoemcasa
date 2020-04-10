@@ -16,13 +16,13 @@ import {
 
 import logo from '../../assets/fico-em-casa-logo-branco.svg'
 
-const Header = ({ hasBackButton, headerTitle, headerImage }) => {
+const Header = ({ hasBackButton, headerTitle, headerImage, isMinimal }) => {
   const [isSearchActive, setSearchActive] = useState(false)
 
   return (
     <Background isFirstPage={!hasBackButton}>
 
-      {hasBackButton
+      {(hasBackButton || isMinimal)
         ? (
           <BackButton to='/categorias'>
             <FiChevronLeft size={16} />
@@ -36,24 +36,26 @@ const Header = ({ hasBackButton, headerTitle, headerImage }) => {
           </LogoWrapper>
         )}
 
-      {headerTitle && <Title>{headerTitle}</Title>}
+      {(headerTitle && !isMinimal) && <Title>{headerTitle}</Title>}
 
-      <SearchWrapper>
-        <SearchInput
-          onFocus={() => setSearchActive(true)}
-          onBlur={() => setSearchActive(false)}
-          placeholder='O que você procura?'
-        />
-        <SearchBtn
-          isSearchActive={isSearchActive}
-        >
-          <FiSearch
-            size={16}
-            color={isSearchActive ? '#e9714d' : '#DAD7D7'}
-            style={{ transition: 'all ease .2s .1s' }}
+      {!isMinimal && (
+        <SearchWrapper>
+          <SearchInput
+            onFocus={() => setSearchActive(true)}
+            onBlur={() => setSearchActive(false)}
+            placeholder='O que você procura?'
           />
-        </SearchBtn>
-      </SearchWrapper>
+          <SearchBtn
+            isSearchActive={isSearchActive}
+          >
+            <FiSearch
+              size={16}
+              color={isSearchActive ? '#e9714d' : '#DAD7D7'}
+              style={{ transition: 'all ease .2s .1s' }}
+            />
+          </SearchBtn>
+        </SearchWrapper>
+      )}
 
       {/* {headerImage && <HeaderImage src={headerImage} />} */}
     </Background>

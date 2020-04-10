@@ -6,6 +6,7 @@ import Categories from './pages/Categories'
 import Subcategories from './pages/Subcategories'
 import Stores from './pages/Stores'
 import Products from './pages/Products'
+import Product from './pages/Product'
 import Login from './pages/Login'
 import OnBoarding from './pages/OnBoarding'
 
@@ -19,6 +20,7 @@ export default function Routes () {
         <Route path='/categorias/:categoryID' exact component={Subcategories} />
         <Route path='/lojas' exact component={Stores} />
         <Route path='/produtos' exact component={Products} />
+        <Route path='/produto/:productID' exact component={Product} />
         <Route path='/login' exact component={Login} />
       </Switch>
     </BrowserRouter>

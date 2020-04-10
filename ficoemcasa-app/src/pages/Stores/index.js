@@ -14,28 +14,28 @@ const storeData = [
   {
     id: 1,
     name: 'Loja cadastrada 1',
-    image: img1, 
+    image: img1,
     address: 'Rua Raul de Carvalho n° 705 - Centro'
 
   },
   {
     id: 2,
     name: 'Loja cadastrada 2',
-    image: img2, 
+    image: img2,
     address: 'Rua Raul de Carvalho n° 705 - Centro'
 
   },
   {
     id: 3,
     name: 'Loja cadastrada 3',
-    image: img3, 
+    image: img3,
     address: 'Rua Raul de Carvalho n° 705 - Centro'
 
   },
   {
     id: 4,
     name: 'Loja cadastrada 4',
-    image: img1, 
+    image: img1,
     address: 'Rua Raul de Carvalho n° 705 - Centro'
 
   }

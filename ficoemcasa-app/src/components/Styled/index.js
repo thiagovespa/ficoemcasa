@@ -2,7 +2,6 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Button = styled.button`
-  display: inline-block;
   background-color: ${props => props.background ? props.background : '#F7B03D'};
   padding: ${props => props.streched ? '.8rem 5rem' : '.8rem 1.3rem'};
   color: ${props => props.color ? props.color : '#fff'};
@@ -13,6 +12,8 @@ export const Button = styled.button`
   font-weight: bold;
   text-decoration: none;
   flex: 0 0 auto;
+  display: ${props => props.centered ? 'block' : 'inline-block'};
+  margin: ${props => props.centered ? '0 auto' : '0'};
 `
 
 export const ButtonLink = styled(Link)`

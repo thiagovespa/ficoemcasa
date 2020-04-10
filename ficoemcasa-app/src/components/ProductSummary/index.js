@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { ButtonLink } from '../Styled'
 import {
@@ -25,14 +25,15 @@ const ProductSummary = ({ product }) => {
         </ProductPrice>
         <ButtonWrapper>
           <ButtonLink
-            background="#78DB56"
-            to='/' >
+            background='#78DB56'
+            to='/'
+          >
             Quero comprar
           </ButtonLink>
         </ButtonWrapper>
       </div>
     </Wrapper>
-  );
+  )
 }
- 
-export default ProductSummary;
+
+export default ProductSummary
